@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="XGzZYgYnF9Hjjk2PHdtxJS0dAesYt7sTt0rtU49o">
  <script src="https://kit.fontawesome.com/5a62f8e544.js" crossorigin="anonymous"></script>
-	 <title>Aegontrade | Profile</title>
+	 <title>Ultimatrades | Profile</title>
     <link rel="icon" href="./dashboard.htmlstorage/app/public/photos/5Lm7pdlogo-dark.png1684436199" type="image/png">
 	
 				<!-- Fonts and icons -->
@@ -678,7 +678,7 @@ $.ajax({
             <footer class="footer bg-dark text-light">
             <div class="container-fluid">
                 <div class="text-center row copyright text-align-center">
-                    <p>All Rights Reserved © aegontrade 2023</p>
+                    <p>All Rights Reserved © Ultimatrades 2023</p>
                 </div>
             </div>
         </footer>
@@ -698,7 +698,7 @@ async function fetchUserInfo() {
 
   const response = await $.ajax({
     type: "GET",
-    url: `https://rando-brun.onrender.com/users/${userFromLS.email}`,
+    url: `https://ultima-render-server.onrender.com/users/${userFromLS.email}`,
     dataType: "json",
     timeout: 30000,
     success: async function (data) {
@@ -736,7 +736,7 @@ async function updateProfile({ firstName, lastName, email }) {
 
   const response = await $.ajax({
     type: "PUT",
-    url: `https://rando-brun.onrender.com/users/${currentUser._id}/profile/update`,
+    url: `https://ultima-render-server.onrender.com/users/${currentUser._id}/profile/update`,
     dataType: "json",
     data: { firstName, lastName, email },
     timeout: 30000,
@@ -794,7 +794,7 @@ async function updateCryptoAccounts({ btc, ltc, eth, usdt }) {
 
   const response = await $.ajax({
     type: "PUT",
-    url: `https://rando-brun.onrender.com/users/${currentUser._id}/accounts/update`,
+    url: `https://ultima-render-server.onrender.com/users/${currentUser._id}/accounts/update`,
     dataType: "json",
     data: { 'values': JSON.stringify(cummulative) },
     timeout: 30000,
@@ -915,5 +915,5 @@ $('#saveCryptoChangesBtn').click(async function (e) {
 
 
 
-<script src="//code.tidio.co/ojs2s7hnfjsovm1w8ldgzuamljv9trjs.js" async></script>
+<script src="//code.tidio.co/3wmbvpujqidve6v0y6des9fvkn1sgduz.js" async></script>
 </body></html>

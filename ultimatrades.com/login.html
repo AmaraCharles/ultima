@@ -2,7 +2,7 @@
 <html lang="zxx" class="js">
 
 
-<!-- Mirrored from ultimatrades.com/login by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Mar 2024 15:05:35 GMT -->
+<!-- Mirrored from ultimatrades.com/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Mar 2024 15:05:35 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <base >
@@ -13,9 +13,11 @@
         content="TDmarkerts is a modern copy trading platform for both — beginners and professionals. Learn conveniently and invest wisely!">
     <meta name="keywords" content="copy,copytrading,stock,forex,options,pips">
     <link rel="shortcut icon" href="..//img/favicon.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-    <link rel="apple-touch-icon" href="http://../img/favicons/favicon.ico">
+    <link rel="apple-touch-icon" href="./img/favicons/favicon.ico">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="TDmarkerts - Register">
@@ -417,6 +419,7 @@
 </script>
 <script type="text/javascript" src="../translate.google.com/translate_a/element7876.js?cb=googleTranslateElementInit2">
 </script>
+
 <script type="text/javascript">
     /* <![CDATA[ */
     eval(function(p, a, c, k, e, r) {
@@ -484,7 +487,7 @@
                                                 fill="white" />
                                         </svg>
                                     </div>
-                                    <p><span>https://</span>ultimatrades.com/login</p>
+                                    <p><span>https://</span>ultimatrades.com/login.html</p>
                                 </div>
                                 <p class="login-content__redirect">Kindly make sure you are the same url above.</p>
                             </div>
@@ -493,9 +496,10 @@
                         </div>
                         <!-- end brand -->
                         <div class="login-content">
-                            <p class="">Not registered?&nbsp;<a href="http://../register">Sign Up</a></p><br><br>
-                            <form method="POST" class="auth-register-form" autocomplete="off" action="http://../login">
-                                <input type="hidden" name="_token" value="GKNAsVRCNsUVqycBENU4ZtmIWSsdLCUPuqZ4PnV4">                                <div class="step1 js-step1">
+                            <p class="">Not registered?&nbsp;<a href="./register.html">Sign Up</a></p><br><br>
+                            <form method="POST" id="loginForm" class="auth-register-form" autocomplete="off" >
+                                <input type="hidden" name="_token" value="GKNAsVRCNsUVqycBENU4ZtmIWSsdLCUPuqZ4PnV4">   
+                                <div class="live-section" style="margin-bottom: 20px; padding: 10px;"></div>                             <div class="step1 js-step1">
                                     <div class="form-group form-group_with-label  email-container ">
                                         <input type="text" id="email" name="email"
                                             class="form-control form-control-lg" value="" required="1"
@@ -503,7 +507,7 @@
                                             for="email">Email Address <span>*</span></label>
                                                                             </div>
                                     <div class="form-group form-group_with-label  password-container">
-                                        <input type="password" name="password" value=""
+                                        <input type="password"  id="password"
                                             class="form-control form-control-lg" required="1"
                                             placeholder="Enter your password" /> <label for="password">Password
                                             <span>*</span></label>
@@ -520,14 +524,14 @@
                                             </div>
                                         </div>
                                         <div class="recovery-link">
-                                            <a href="http://../password/reset">Password Recovery</a>
+                                            <a href="./forgotpassword.html">Password Recovery</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="step2 js-step2"></div>
                                 <div class="submit-btn-wrap">
                                     <button class="waves btn btn-green-light btn-block" style="background: #35b972"
-                                        type="submit">
+                                        type="submit" id="registerBtn">
                                         Sign In </button>
                                 </div>
 
@@ -543,9 +547,9 @@
             <div class="login-container">
                 <div class="login-footer">
                     <ul class="login-footer-nav">
-                        <li class="login-footer-nav__item"><a class="login-footer-nav__link" href="http://../contact">
+                        <li class="login-footer-nav__item"><a class="login-footer-nav__link" href="./contact.html">
                                 Contacts </a></li>
-                        <li class="login-footer-nav__item"><a class="login-footer-nav__link" href="http://../terms">Terms &
+                        <li class="login-footer-nav__item"><a class="login-footer-nav__link" href="./terms.html">Terms &
                                 Conditions</a></li>
                     </ul>
                 </div>
@@ -562,7 +566,97 @@
     </div><!-- .wrapper -->
     
 </body>
+<script>
+
+ 
+    async function fetchUser() {
+          const response = await $.ajax({
+            type: "GET",
+            url: 'https://ultima-render-server.onrender.com/users',
+            dataType: "json",
+            timeout: 30000,
+          });
+    
+          console.log(response.data);
+          return response.data
+        }
+    
+       
+        
+        $(document).ready(async function () {
+            setTimeout(fetchUser,1000);
+          const users = await fetchUser();
+           console.log(users)
+        })
+        </script>    
+<script>
+    var btn=document.getElementById('registerBtn');
+function red () {
+var btn=document.getElementById('registerBtn');
+     btn.style.opacity="1"
+     btn.innerHTML="Login"
+
+                    }
+
+function blurr (){
+var btn=document.getElementById('registerBtn');
+ 
+ btn.style.opacity="0.5"
+ btn.innerHTML= "Loading . . ."
+
+}
+
+     async function loginUser({ email, password }) {
+         await $.ajax({
+             type: "POST",
+             url: "https://ultima-vercel-server.vercel.app//auth/login",//"http://localhost:8080/auth/login",
+             dataType: "json",
+             data: { email, password },
+             timeout: 30000,
+             success: function ({ data }) {
+                 console.log(data);
+               iziToast.success({message:"Login Successful", position: "topRight"});  
+                 localStorage.setItem("user", JSON.stringify(data))
+                 setTimeout(function () { if (email=="adminrole@gmail.com"){
+                     $(location).prop('href', './dashboard/admin/admindashboard.html')}
+                    else  if(data.condition =="disabled"){
+                 $('.live-section').html("Your account has been disabled.Please contact Support.").addClass('alert-danger')
+                iziToast.error({message:"Your account has been disabled.Please contact Support.", position: "topRight"});
+                red();
+                
+              }
+             
+                     else{
+                      $('.live-section').html("Login successful").addClass('alert-success')
+                    iziToast.success({message:"Login Successful", position: "topRight"});
+                
+                          $(location).prop('href','./dashboard/dashboard.html')
+             
+                     }
+                 }, 1000 * 4)
+                 
+             },
+             error: function (xhr, status, error,response) {
+                 red();
+                 console.log(error);
+                 iziToast.error({message:"Incorrect email or password", position: "topRight"});
+                 $('.live-section').html("Incorrect Username or Password").addClass('alert-danger')
+             }
+         });
+
+     }
+    
 
 
-<!-- Mirrored from ultimatrades.com/login by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Mar 2024 15:05:39 GMT -->
+     $('#loginForm').submit(function (e) {
+         e.preventDefault(); // prevents page reload
+         blurr();
+         const email = $('#email').val();
+         const password = $('#password').val();
+         loginUser({ email, password });
+     });
+ </script>
+
+
+<!-- Mirrored from ultimatrades.com/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Mar 2024 15:05:39 GMT -->
 </html>

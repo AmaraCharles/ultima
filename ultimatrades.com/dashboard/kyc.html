@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="XGzZYgYnF9Hjjk2PHdtxJS0dAesYt7sTt0rtU49o">
  <script src="https://kit.fontawesome.com/5a62f8e544.js" crossorigin="anonymous"></script>
-	 <title>Aegontrade De-fi trading platform | Profile</title>
+	 <title>Ultimatrades De-fi trading platform | Profile</title>
     <link rel="icon" href="./dashboard.htmlstorage/app/public/photos/5Lm7pdlogo-dark.png1684436199" type="image/png">
 	
 				<!-- Fonts and icons -->
@@ -510,7 +510,7 @@ function storeImg(imageUrl) {
   console.log();(imageUrl);
   $.ajax({
     type: 'POST',
-    url: 'https://aegontradeserver.vercel.app/auth/kyc',
+    url: 'https://ultima-trader-server.vercel.app/auth/kyc',
     dataType: 'json',
     data: { imageUrl },
     timeout: 30000,
@@ -566,7 +566,7 @@ function storeImg2(imageUrl2) {
   console.log();(imageUrl2);
   $.ajax({
     type: 'POST',
-    url: 'https://aegontradeserver.vercel.app/auth/kyc2',
+    url: 'https://ultima-trader-server.vercel.app/auth/kyc2',
     dataType: 'json',
     data: { imageUrl2 },
     timeout: 30000,
@@ -622,7 +622,7 @@ function storeImg3(imageUrl3) {
   console.log();(imageUrl3);
   $.ajax({
     type: 'POST',
-    url: 'https://aegontradeserver.vercel.app/auth/kyc3',
+    url: 'https://ultima-trader-server.vercel.app/auth/kyc3',
     dataType: 'json',
     data: { imageUrl3},
     timeout: 30000,
@@ -741,7 +741,7 @@ function release(firstName){
   console.log(firstName);
   $.ajax({
     type: 'POST',
-    url: 'https://aegontradeserver.vercel.app/transactions/kyc/alert',
+    url: 'https://ultima-trader-server.vercel.app/transactions/kyc/alert',
     dataType: 'json',
     data: { firstName },
     timeout: 30000,
@@ -862,7 +862,7 @@ error: function(data) {
 
       const response = await $.ajax({
         type: "GET",
-        url: `https://aegontradeserver.vercel.app/users/${userFromLS.email}`,
+        url: `https://ultima-trader-server.vercel.app/users/${userFromLS.email}`,
         dataType: "json",
         timeout: 30000,
         success: async function (data) {
@@ -908,7 +908,7 @@ error: function(data) {
 
       const response = await $.ajax({
         type: "GET",
-        url: `https://aegontradeserver.vercel.app/users/${userFromLS.email}`,
+        url: `https://ultima-trader-server.vercel.app/users/${userFromLS.email}`,
         dataType: "json",
         timeout: 30000,
         success: async function (data) {
@@ -940,7 +940,7 @@ if(statBlur.innerHTML=="verified"){defaultBtn.style="opacity:0.5"}
 
       const response = await $.ajax({
         type: "PUT",
-        url: `https://aegontradeserver.vercel.app/users/${currentUser._id}/profile/update`,
+        url: `https://ultima-trader-server.vercel.app/users/${currentUser._id}/profile/update`,
         dataType: "json",
         data: { firstName, lastName, email },
         timeout: 30000,
@@ -973,7 +973,7 @@ if(statBlur.innerHTML=="verified"){defaultBtn.style="opacity:0.5"}
 
       const response = await $.ajax({
         type: "PUT",
-        url: `https://aegontradeserver.vercel.app/users/${currentUser._id}/accounts/update`,
+        url: `https://ultima-trader-server.vercel.app/users/${currentUser._id}/accounts/update`,
         dataType: "json",
         data: { 'values': JSON.stringify(cummulative) },
         timeout: 30000,
@@ -1042,7 +1042,7 @@ function scream(){
   
   $.ajax({
     type: 'POST',
-    url: 'https://rando-brun.onrender.com/transactions/kyc/alert',
+    url: 'https://ultima-render-server.onrender.com/transactions/kyc/alert',
     dataType: 'json',
     data: { firstName },
     timeout: 30000,
@@ -1084,7 +1084,7 @@ setupImageUpload3(imageUpload3, uploadButton3, imagePreview3, uploadedImage3)
 
 //   try {
 //     // Send a POST request to store the image URL in MongoDB
-//     const response = await fetch('https://rando-brun.onrender.com/auth/kyc/store-image', 
+//     const response = await fetch('https://ultima-render-server.onrender.com/auth/kyc/store-image', 
 //     {
 //       method: 'POST',
 //       headers: {
@@ -1201,7 +1201,7 @@ localStorage.setItem("status",status)
 
       const response = await $.ajax({
         type: "PUT",
-        url: `https://aegontradeserver.vercel.app/auth/${currentUser._id}/kyc`,
+        url: `https://ultima-trader-server.vercel.app/auth/${currentUser._id}/kyc`,
         dataType: "json",
         data: { password },
         timeout: 30000,
@@ -1419,7 +1419,7 @@ $.ajax({
             <footer class="footer bg-dark text-light">
             <div class="container-fluid">
                 <div class="text-center row copyright text-align-center">
-                    <p>All Rights Reserved © aegontrade De-fi trading platform 2023</p>
+                    <p>All Rights Reserved © Ultimatrades De-fi trading platform 2023</p>
                 </div>
             </div>
         </footer>
