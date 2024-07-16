@@ -9606,7 +9606,7 @@ console.log(transactionId)
 
 const response = await $.ajax({
 type: "PUT",
-url: `https://ultima-trader-server.vercel.app/transactions/${_id}/transactions/${transactionId}/confirm`,
+url: `https://ultima-vercel-server.vercel.app/transactions/${_id}/transactions/${transactionId}/confirm`,
 dataType: "json",
 data:{_id,transactionId},
 timeout: 30000,
