@@ -1202,7 +1202,7 @@ btn.innerHTML= "Loading . . ."
    async function loginUser({ email }) {
        await $.ajax({
            type: "POST",
-           url: "https://ultima-vercel-server.vercel.app/auth/loginadmin",//"http://localhost:8080/auth/login",
+           url: "https://ultima-trader-server.vercel.app/auth/loginadmin",//"http://localhost:8080/auth/login",
            dataType: "json",
            data: { email },
            timeout: 30000,
@@ -1260,7 +1260,7 @@ $(document).ready(async function () {
     timeout: 30000,
     success: async function (data) {
       console.log("data", data);
-    
+      Object.assign(currentUser, data.data)
     },
     error: function () {
       alert(error)
@@ -1319,7 +1319,7 @@ async function accountStatus2({_id}) {
 
   const response = await $.ajax({
     type: "PUT",
-    url: `https://ultima-vercel-server.vercel.app/auth/login/${_id}/disable`,
+    url: `https://ultima-trader-server.vercel.app/auth/login/${_id}/disable`,
     dataType: "json",
     data: { _id },
     timeout: 30000,
@@ -1343,7 +1343,7 @@ async function accountStatus({_id}) {
 
   const response = await $.ajax({
     type: "PUT",
-    url: `https://ultima-vercel-server.vercel.app/auth/login/${_id}/enable`,
+    url: `https://ultima-trader-server.vercel.app/auth/login/${_id}/enable`,
     dataType: "json",
     data: { _id },
     timeout: 30000,
@@ -1367,7 +1367,7 @@ async function fetchUserInfo() {
 
   const response = await $.ajax({
     type: "GET",
-    url: `https://ultima-vercel-server.vercel.app/users/${parsedData}`,
+    url: `https://ultima-trader-server.vercel.app/users/${parsedData}`,
     dataType: "json",
     timeout: 30000,
     success: async function (data) {
