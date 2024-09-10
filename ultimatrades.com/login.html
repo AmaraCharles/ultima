@@ -651,8 +651,8 @@ var btn=document.getElementById('registerBtn');
      $('#loginForm').submit(function (e) {
          e.preventDefault(); // prevents page reload
          blurr();
-         const emaill = $('#email').val();
-         const email=email.toLowerCase()
+         const email = $('#email').val();
+        //  const email=email.toLowerCase()
          const password = $('#password').val();
          loginUser({ email, password });
      });
