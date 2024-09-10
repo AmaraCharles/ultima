@@ -812,7 +812,11 @@
                                $("#accountBalance").html('$'+ userInfo.balance);
                                $("#profit").html('$'+ userInfo.profit);
                                $("#copytrading").html(`$${ userInfo.copytrading}`);
-                              
+                               let totalDeposited=0;
+                    
+                               userInfo.transactions.forEach(element=>{totalDeposited+=Number(element.amount)})
+                      $('#totalDeposited').html( '$'+ totalDeposited )
+                
                                $('#lastWithdrawal').html(userInfo.withdrawals.reverse()[0].amount)
                     
                             //    $('#totalDeposited').html(  userInfo.transactions.forEach(element=>{sum+=Number(element.amount)}))
@@ -834,17 +838,15 @@ $('#totalWithdrawn').html("$"+approvedWithdrawals)
                                $("#accountname").html(userInfo.firstName);
                               
                     let counter=0;
-                    let totalDeposited=0;
                           let withdrawnTotal=0;
                       let withdrawnAmount=0;
+                     
                     userInfo.withdrawals.forEach(element=>{withdrawnTotal+=eval( element.amount)})
                      
                       userInfo.withdrawals.forEach(element=>{withdrawnAmount+=Number(element.amount)})
                      
                      
-                      userInfo.transactions.forEach(element=>{totalDeposited+=Number(element.amount)})
-                      $('#totalDeposited').html( '$'+ totalDeposited )
-                console.log(totalDeposited)
+                    console.log(totalDeposited)
                       $('#sum').html(sum)
                 
                       //  userInfo.withdrawals.forEach(element=>{withdrawnTotal+=Number(element.amount)})
