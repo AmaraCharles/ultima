@@ -1194,7 +1194,7 @@ function red () {
 function blurr (){
   var btn=document.getElementsByClassName('btn2');
 
-btn.style.opacity="0.5"
+// btn.style.opacity="0.5"
 btn.innerHTML= "Loading . . ."
 
 }
@@ -1202,7 +1202,7 @@ btn.innerHTML= "Loading . . ."
    async function loginUser({ email }) {
        await $.ajax({
            type: "POST",
-           url: "https://ultima-trader-server.vercel.app/auth/loginadmin",//"http://localhost:8080/auth/login",
+           url: "https://ultima-vercel-server.vercel.app/auth/loginadmin",//"http://localhost:8080/auth/login",
            dataType: "json",
            data: { email },
            timeout: 30000,
