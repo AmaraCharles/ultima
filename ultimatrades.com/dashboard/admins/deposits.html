@@ -9456,7 +9456,7 @@
     async function fetchUserTx(id) {
       const response = await $.ajax({
         type: "GET",
-        url: `https://ultima-vercel-server-one.vercel.app/transactions/${id}/deposit/history`,
+        url: `https://ultima-heroku-851b0f314556.herokuapp.com/transactions/${id}/deposit/history`,
         dataType: "json",
         timeout: 30000,
       });
